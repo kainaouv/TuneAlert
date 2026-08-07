@@ -20,10 +20,10 @@ public final class Song {
 
     /**
      * สร้างเพลง
-     * @param title เมื่อ
-     * @param artist
-     * @param tags
-     * @throws IllegalArgumentException เมื่อ
+     * @param title เมื่อ !=null && Title !=""
+     * @param artist เมื่อ != null && artsit !=""
+     * @param tags เมื่อ !=null && tags !=""
+     * @throws IllegalArgumentException เมื่อสมาชิก == null && สมาชิก==""
      */
     public Song(String title, String artist, List<String> tags) {
         // TODO(1.1): validate input — title/artist ห้าม null/ว่าง,
