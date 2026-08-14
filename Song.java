@@ -20,10 +20,10 @@ public final class Song {
 
     /**
      * สร้างเพลง
-     * @param title เมื่อ !=null && Title !=""
-     * @param artist เมื่อ != null && artsit !=""
-     * @param tags เมื่อ !=null && tags !=""
-     * @throws IllegalArgumentException เมื่อสมาชิก == null && สมาชิก==""
+     * @param title != null && title != ""
+     * @param artist != null && artist != ""
+     * @param tags != null && tag != ""
+     * @throws IllegalArgumentException เมื่อสมาชิก == null && สมาชิก == ""
      */
     public Song(String title, String artist, List<String> tags) {
         // TODO(1.1): validate input — title/artist ห้าม null/ว่าง,
@@ -76,7 +76,7 @@ public final class Song {
         // TODO(1.4): ✗ โค้ดนี้ mutate ตัวเอง! ต้องสร้างและคืน Song ตัวใหม่แทน
         //            (อย่าลืม validate tag ด้วย)
 
-        List<String> next = new ArrayList<>(); //หน้า10
+        List<String> next = new ArrayList<>(tags); //หน้า10
         next.add(tag);
         return new Song(title,artist, next);
     }
